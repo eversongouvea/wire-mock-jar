@@ -1,4 +1,5 @@
 #Customizado
-custom:
+wiremock:
   port: 8081
+  mappings: 'C:\Users\Stefanini\Downloads\mock'
 

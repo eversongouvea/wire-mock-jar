@@ -2,7 +2,7 @@ package br.com.wiremock.configuration;
 
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,14 +11,19 @@ import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 
 @Configuration
 public class Config {
-
-	@Autowired
-	private ConfigProperties configProperties;
+	
+	@Value("${wiremock.port:8081}")
+	private int port;
+	
+	@Value("${wiremock.mappings:src/test/resources}")
+	private String mappings;
+	
 	
 	@Bean
 	public WireMockServer createWireMock() {
 
-		WireMockConfiguration configWireMoc = wireMockConfig().port(configProperties.getPort());
+		WireMockConfiguration configWireMoc = wireMockConfig().port(port)
+				                                              .usingFilesUnderDirectory(mappings);
 		WireMockServer wireMockServer = new WireMockServer(configWireMoc);
 		return wireMockServer;
 		
