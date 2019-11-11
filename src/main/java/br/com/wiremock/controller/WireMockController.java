@@ -14,7 +14,6 @@ public class WireMockController {
 	@Autowired
 	WireMockServer wire;
 	
-	
 	@GetMapping(path = "/start")
 	public String start() {
 		

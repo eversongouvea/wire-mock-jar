@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.github.tomakehurst.wiremock.WireMockServer;
 
 @Component
-public class Contruct {
+public class Construct {
 
 	@Autowired
 	WireMockServer wire;
