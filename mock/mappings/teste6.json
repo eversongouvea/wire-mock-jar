@@ -1,0 +1,10 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/novo"
+    },
+    "response": {
+        "status": 200,
+        "body": "novo"
+    }
+}

@@ -24,8 +24,7 @@ public class Config {
 
 		WireMockConfiguration configWireMoc = wireMockConfig().port(port)
 				                                              .usingFilesUnderDirectory(mappings);
-		WireMockServer wireMockServer = new WireMockServer(configWireMoc);
-		return wireMockServer;
+		return new WireMockServer(configWireMoc);
 		
 	}
 	

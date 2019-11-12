@@ -1,5 +1,5 @@
 #Customizado
 wiremock:
   port: 8081
-  mappings: 'C:\Users\Stefanini\Downloads\mock'
+  mappings: 'mock'
 
