@@ -1,10 +1,10 @@
 {
     "request": {
         "method": "GET",
-        "url": "/api/mytest6"
+        "url": "/api/teste5"
     },
     "response": {
         "status": 200,
-        "body": "Json pasta download6"
+        "body": "{status:ok}"
     }
 }
