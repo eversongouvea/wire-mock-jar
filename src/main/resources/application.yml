@@ -1,5 +1,16 @@
+spring:
+  application:
+    name: api-gateway
+
 #Customizado
 wiremock:
   port: 8081
   mappings: 'mock'
 
+server:
+  port: 8080
+zuul:
+  routes:
+    wiremock:
+      path: /api/songs/**
+      url: http://localhost:8081/

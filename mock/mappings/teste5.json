@@ -4,7 +4,7 @@
         "url": "/api/erewrwerw"
     },
     "response": {
-        "status": 200,
-        "body": "{status:ok}"
+        "status": 201,
+        "body": "status:ok"
     }
 }
