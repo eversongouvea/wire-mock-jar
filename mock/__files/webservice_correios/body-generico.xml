@@ -1,0 +1,30 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Header>
+		<X-OPNET-Transaction-Trace:X-OPNET-Transaction-Trace xmlns:X-OPNET-Transaction-Trace="http://opnet.com">pid=64961,requestid=0f64a220c0ecc3406bd9dedb1d8ec82c5b01311a4c3687a0</X-OPNET-Transaction-Trace:X-OPNET-Transaction-Trace>
+	</soapenv:Header>
+	<soapenv:Body>
+		<ns2:buscaEventosListaResponse xmlns:ns2="http://resource.webservice.correios.com.br/">
+			<return>
+				<versao>2.0</versao>
+				<qtd>1</qtd>
+				<objeto>
+					<numero>{{this}}</numero>
+					<sigla>BD</sigla>
+					<nome>ENCOMENDA PAC (ETIQ LOGICA)</nome>
+					<categoria>ENCOMENDA PAC</categoria>
+					<evento>
+						<tipo>BDR</tipo>
+						<status>00</status>
+						<data>16/09/2019</data>
+						<hora>10:51</hora>
+						<descricao>Objeto entregue ao destinatário</descricao>
+						<local>CDD AMPARO</local>
+						<codigo>13900971</codigo>
+						<cidade>Amparo</cidade>
+						<uf>SP</uf>
+					</evento>
+				</objeto>                        
+			</return>
+		</ns2:buscaEventosListaResponse>
+	</soapenv:Body>
+</soapenv:Envelope>

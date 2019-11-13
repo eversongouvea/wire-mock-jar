@@ -1,0 +1,19 @@
+{
+    "request": {
+        "urlPath": "/service/rastro",
+        "method": "POST",
+        "bodyPatterns": [
+            {
+                "matchesXPath": "//objetos/text()"
+            }
+        ]
+    },
+    "response": {
+        "status": 200,
+        "transformers": ["response-template"],
+        "bodyFileName": "webservice_correios/body-generico.xml",
+        "headers": {
+            "Content-Type":  "text/xml; charset=utf-8"
+        }       
+    }
+}
