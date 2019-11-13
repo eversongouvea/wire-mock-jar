@@ -5,7 +5,6 @@ import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMoc
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.client.RestTemplate;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
@@ -13,7 +12,7 @@ import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 @Configuration
 public class Config {
 
-	@Value("${wiremock.port:8081}")
+	@Value("${wiremock.port}")
 	private int port;
 
 	@Value("${wiremock.mappings:src/test/resources}")
@@ -27,9 +26,4 @@ public class Config {
 
 	}
 
-	@Bean
-	public RestTemplate getRestTemplate() {
-		return new RestTemplate();
-	}
-	
 }

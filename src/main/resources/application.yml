@@ -2,9 +2,11 @@ spring:
   application:
     name: api-gateway
 
-#Customizado
+#Customizado wiremock
+#port:notNull 
+#mappings: optional(default:src/test/resources)
 wiremock:
-  port: 8081
+  port: 8081 
   mappings: 'mock'
 
 server:
@@ -12,5 +14,5 @@ server:
 zuul:
   routes:
     wiremock:
-      path: /api/songs/**
-      url: http://localhost:8081/
+      path: /wiremock/**
+      url: http://localhost:${wiremock.port}
