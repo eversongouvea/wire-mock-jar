@@ -12,6 +12,7 @@ import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 @Configuration
 public class Config {
 
+	
 	@Value("${wiremock.port}")
 	private int port;
 
@@ -25,5 +26,10 @@ public class Config {
 		return new WireMockServer(configWireMoc);
 
 	}
+	
+	@Bean
+    public PreFilter preFilter() {
+        return new PreFilter();
+    }
 
 }
