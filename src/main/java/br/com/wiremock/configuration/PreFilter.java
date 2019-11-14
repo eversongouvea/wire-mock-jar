@@ -39,7 +39,7 @@ public class PreFilter extends ZuulFilter {
 	    try {
 	    	ctx.setSendZuulResponse(false);
 	        ctx.setResponseStatusCode(HttpStatus.SC_TEMPORARY_REDIRECT);
-			ctx.getResponse().sendError(500, "Serviço wireMock desligado");
+			ctx.getResponse().sendError(500, "WireMock offline");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

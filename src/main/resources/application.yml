@@ -16,3 +16,4 @@ zuul:
     wiremock:
       path: /wiremock/**
       url: http://localhost:${wiremock.port}
+      
